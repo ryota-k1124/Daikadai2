@@ -1,7 +1,7 @@
 class Ability
   include CanCan::Ability
 
- nitialize(user)
+  def initialize(user)
     # >>>>>>ここから
     if user && user.admin?
       can :access, :rails_admin   # grant access to rails_admin
