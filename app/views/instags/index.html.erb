@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10 col-xs-10">
+<p id="notice"><%= notice %></p>
+
+<h1>Instagram(偽)</h1>
+
+  <tbody>
+    <% @instags.each do |instag| %>
+        <div class="instag_img"><%= image_tag instag.image.to_s %></div><br>
+        
+        <%= link_to 'Show', instag, class: 'btn btn-default btn-sm btn-success' %>
+        <%= link_to 'Edit', edit_instag_path(instag), class: 'btn btn-default btn-sm btn-success' %>
+        <%= link_to 'Destroy', instag, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default btn-sm btn-success' %>
+    <br><br>
+    <% end %>
+
+<br>
+
+<%= link_to 'New Instag', new_instag_path, class: 'btn btn-default btn-sm btn-success' %>
+</div>
+</div>

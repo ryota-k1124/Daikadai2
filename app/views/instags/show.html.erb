@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10 col-xs-10">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @instag.content %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @instag.image.to_s %>
+</p>
+
+<%= link_to 'Edit', edit_instag_path(@instag), class: 'btn btn-primary btn-block' %> |
+<%= link_to 'Back', instags_path, class: 'btn btn-primary btn-block' %>
+</div>
+</div>

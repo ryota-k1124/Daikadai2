@@ -1,0 +1,26 @@
+<%= form_for(@instag) do |f| %>
+  <% if @instag.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@instag.errors.count, "error") %> prohibited this instag from being saved:</h2>
+
+      <ul>
+      <% @instag.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :content %><br>
+    <%= f.text_field :content %>
+  </div>
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image %><br>
+    <%#= f.hidden_field :image %><br>
+  </div>
+  <div class="actions">
+    <%= f.submit'投稿', class: 'btn btn-primary btn-block' %>
+  </div>
+<% end %>
