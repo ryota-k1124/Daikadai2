@@ -1,5 +1,6 @@
 class InstagsController < ApplicationController
   before_action :set_instag, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /instags
   # GET /instags.json
